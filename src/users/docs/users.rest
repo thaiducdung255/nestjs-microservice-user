@@ -1,0 +1,42 @@
+# Global configs
+http://localhost:3000
+Accept: application/json
+Content-Type: application/json
+--
+
+# test api
+--
+GET /
+
+--
+# document api (json)
+GET /api/json
+
+--
+# get all users
+GET /users
+
+--
+# create new user
+POST /users
+{
+  "username": "DUNGTD27",
+  "password": "newpass",
+  "age": 22
+}
+
+--
+# get one user by id
+GET /users/5f5b2c46c6911ca40882e9fc
+
+--
+# update one user by id
+PATCH /users/5f5b2c46c6911ca40882e9fc
+{
+  "age": 29,
+  "node": true
+}
+
+--
+# delete one user by id
+DELETE /users/5f5affdb95730b2d3115c3fb
