@@ -15,7 +15,7 @@ export class UsersController {
     return this.usersService.create(createUserDto)
   }
 
-  @MessagePattern({ cmd: 'get-all-user' })
+  @MessagePattern({ cmd: 'get-all-users' })
   getAll(): Promise<User[]> {
     return this.usersService.getAll()
   }
