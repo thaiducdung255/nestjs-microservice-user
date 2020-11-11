@@ -12,6 +12,7 @@ export class UsersController {
 
   @MessagePattern({ cmd: 'create-user' })
   create(createUserDto: CreateUserDto): Promise<User> {
+    console.log('create user')
     return this.usersService.create(createUserDto)
   }
 
