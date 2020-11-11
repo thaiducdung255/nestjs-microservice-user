@@ -17,7 +17,10 @@ const mongoConfigs = {
 }
 
 @Module({
-  imports: [MongooseModule.forRoot('mongodb://localhost/nest', mongoConfigs), UsersModule],
+  imports: [
+    MongooseModule.forRoot('mongodb://localhost/nest', mongoConfigs),
+    UsersModule
+  ],
   controllers: [AppController],
   providers: [AppService],
 })
