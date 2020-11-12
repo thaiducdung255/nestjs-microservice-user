@@ -13,7 +13,7 @@ export class UsersService {
 
   create(createUserDto: CreateUserDto): Promise<User> {
     const SALT: string = randomBytes(20).toString('hex')
-    const CREATED_USER = new this.userModel({ ...createUserDto, SALT })
+    const CREATED_USER = new this.userModel({ ...createUserDto, salt: SALT })
     return CREATED_USER.save()
   }
 
